@@ -1,5 +1,7 @@
 # binance_sniper
 
+## 脚本用于抢币安新开盘的代币
+
 1.pycharm中打开项目文件夹，pin install 安装需要的库
 2.pyinstaller -F Binance_Sniper_3.py打包exe即可；如果部分库丢失，用下面命令打包
 pyinstaller --onefile --hidden-import=websockets --hidden-import=ujson -F Binance_Sniper_3.py
