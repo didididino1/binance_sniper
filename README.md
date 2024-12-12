@@ -16,7 +16,7 @@ pyinstaller --onefile --hidden-import=websockets --hidden-import=ujson -F Binanc
 
 3.buy_token_quantity买入代币数量，由于抢开盘时从交易所获取代币价格比较耗时，所以这里根据可能的价格自己估算出数量即可；
 
-4.open_trade_time 代币开盘时间的毫秒时间戳，脚本会在这里设置的开盘时间前200ms开始死循环通过wss.send持续发送买单。
+4.open_trade_time 代币开盘时间的毫秒时间戳，脚本会在这里设置的开盘时间前200ms开始死循环通过wss.send持续发送市价买单。
 
 ## 注意事项：
 1.币安开盘不好抢，要抢到的话买入代币的时间要压缩到5毫秒以内，代码已经使用cython优化到最好，抢开盘的主要瓶颈在于服务器。如果要抢，建议买的服务器使用东京亚马逊云，或者自己ping wss服务器的ip地址，找对应的机房来买自己的服务器。
